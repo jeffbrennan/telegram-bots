@@ -19,7 +19,7 @@ from selenium.webdriver.common.keys import Keys
 
 def build_selenium():
     chrome_options = webdriver.ChromeOptions()
-    # chrome_options.add_argument("--headless")     # run in background
+    chrome_options.add_argument("--headless")     # run in background
     chrome_options.add_argument("--disable-gpu")  # laptop has no dedicated gpu
     chrome_options.add_argument('--log-level=3')  # suppress all console logs
 
@@ -40,7 +40,6 @@ def scrape_data(driver):
 
     driver.get(site_url)
 
-    # use CSS selectors for small performance gain [obtained via https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/]
     wait = WebDriverWait(driver, 3)
     wait.until(EC.visibility_of_element_located((By.XPATH, "//input[@name='username']"))).click()
     user_field = driver.find_element_by_xpath("//input[@name='username']")
@@ -94,7 +93,7 @@ def check_dir():
   wpm_raw = glob.glob(f'{download_dir}\*')
   day_seconds = 60 * 60 * 24
 
-  old_files = [f for f in wpm_raw if ((start_time - os.path.getctime(f)) > day_seconds)]
+  old_files = [f for f in wpm_raw if ((start_time - os.path.getctime(f)) > day_seconds*0.5)]
 
   if old_files:
     [os.remove(f) for f in old_files]
