@@ -1,14 +1,43 @@
 # Telegram-Bots
 
-A collection of bots using the telegram api to accomplish various tasks. Click on each folder to learn more
+A collection of bots using the telegram api to accomplish various tasks.
 
 ## Current projects
 
-- clothing-bot: recommends clothing based on the current forecast
-  - powered by: pyowm, telegram api
+### [clothing-bot](clothing-bot/clothing.py)
+recommends clothing based on the current forecast
 
-- domestic-notifier: messages girlfriend update for recurring household chores
-  - powered by: telegram api
+- pyowm
+- telegram api
 
-- recipe organizer: stores recipe links and sends them according to specified tags
-  - powered by: telegram api
+---
+
+### [recipe-organizer](recipe-organizer/organizer.py)
+
+stores recipe links and sends them according to specified tags
+
+- telegram api
+
+---
+
+### [wpm](wpm/plot-wpm.py)
+
+sends progress updates on typing speed from typeracer.com
+
+- seaborn
+- matplotlib
+- selenium
+- pandas
+- os / glob etc. 
+
+---
+
+### [reddit-scraper](reddit-scraper/)
+
+Uses the Reddit API and [PRAW](https://praw.readthedocs.io/en/latest/) to retrieve the following information: 
+
+- (manual) user info
+- (weekly) new music
+- (daily) deals on computer parts & clothes
+
+----
