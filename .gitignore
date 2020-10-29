@@ -4,3 +4,5 @@
 *.png
 tempCodeRunnerFile.py
 wpm/data
+*.vscode
+__pycache__
