@@ -80,10 +80,6 @@ def add_recipe(result, message_parse, index, all_results):
 # TODO: add functionality
 # def edit_recipe(message):
 
-# TODO: add validation logic (valid link, command, user etc.)
-# def validate_input(message):
-#     while True:
-
 # TODO: make this work
 # def delete_message(message, index, all_messages):
 #     delete_id = all_messages[index-1]['update_id']
@@ -110,10 +106,6 @@ def get_logger(all_results):
 
 def result_handler(all_results):
     get_ids = get_logger(all_results)
-    print(get_ids)
-    # for result in results:
-    #     if 'get' in result['message']['text'].split():
-    #         get_ids.append(result['update_id'])
 
     for index, result in enumerate(all_results):
         # validate_input(result)

@@ -1,4 +1,6 @@
 *.json
 *.csv
 *.txt
+*.png
 tempCodeRunnerFile.py
+wpm/data
